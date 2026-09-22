@@ -1,12 +1,20 @@
 {
-    "code-runner.runInTerminal": true,
-    "code-runner.executorMap": {
-        "cpp": "cd $dir; C:\\msys64\\ucrt64\\bin\\g++.exe $fileName -o $fileNameWithoutExt.exe -std=c++17; if ($?) { .\\$fileNameWithoutExt.exe }"
-    },
-    "C_Cpp.default.compilerPath": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
     "C_Cpp.default.cppStandard": "c++17",
     "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.intelliSenseMode": "macos-clang-arm64",
+    "cmake.generator": "Ninja",
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.executorMap": {
+        "cpp": "cd \"$dir\" && SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk /usr/bin/clang++ -std=c++17 -Wall -Wextra -pedantic \"$fileName\" -o \"$fileNameWithoutExt\" && \"./$fileNameWithoutExt\"",
+        "python": "python3 -u"
+    },
+    "python.defaultInterpreterPath": "${env:HOME}/.local/bin/python3",
+    "python.terminal.activateEnvironment": true,
     "files.exclude": {
-        "**/*.exe": true
+        "**/*.exe": true,
+        "**/*.o": true,
+        "**/*.obj": true
     }
 }
