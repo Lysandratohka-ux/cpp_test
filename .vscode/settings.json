@@ -7,7 +7,7 @@
     "code-runner.runInTerminal": true,
     "code-runner.saveFileBeforeRun": true,
     "code-runner.executorMap": {
-        "cpp": "cd \"$dir\" && SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk /usr/bin/clang++ -std=c++17 -Wall -Wextra -pedantic \"$fileName\" -o \"$fileNameWithoutExt\" && \"./$fileNameWithoutExt\"",
+        "cpp": "cd \"$dir\" && SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk /usr/bin/clang++ -std=c++17 -Wall -Wextra -pedantic \"$fileName\" -o \"$fileNameWithoutExt.exe\" && \"./$fileNameWithoutExt.exe\"",
         "python": "python3 -u"
     },
     "python.defaultInterpreterPath": "${env:HOME}/.local/bin/python3",
