@@ -1,10 +1,14 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-
-int main()
-{
-    char a, b, c, dot, d;
-    cin >> a >> b >> c >> dot >> d;
-    cout << d << dot << c << b << a << endl;
+int main() {
+    double p; // 输入的数字
+    int q, a, b, c, d; // 转换成的4位数和分离出来的4位数字
+    cin >> p;
+    q = int(p * 10);
+    a = q / 1000; // 千位
+    b = q / 100 % 10; // 百位
+    c = q / 10 % 10; // 十位
+    d = q % 10; // 个位
+    cout << d << "." << c << b << a << endl;
     return 0;
 }
