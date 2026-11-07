@@ -1,0 +1,15 @@
+MathSolver 2.0 verification — 2026-10-30 Asia/Shanghai
+Host: Apple Silicon macOS, Apple Clang 21, Qt 6.11.2, C++20.
+Existing core regression: 64 checks passed.
+Derivative: 18 groups / 46 checks passed.
+Integral: 20 groups / 53 checks passed.
+Limit: 22 groups / 33 checks passed.
+Additional parsing/error input: 9 checks passed.
+GUI: 20 flows passed, including all seven original navigation modes.
+Independent deployed .app copied to /tmp: 20 GUI flows passed (exit 0).
+Nested code signatures: codesign --verify --deep --strict passed.
+ICNS round trip: all 10 standard / Retina iconset images recovered (16 through 1024 pixels).
+Windows: MSVC/Qt GUI build + native MinGW CAS worker configuration and scripts provided; NOT built or executed on this host.
+Limits: finite analytic quotient leading terms checked through order 12; unsupported nested oscillations return Unknown. No convergence claims based on sampling.
+Integrals: 16 representative primitives returned exact expressions; 13 symbolic differentiation checks, 3 pointwise cross-checks (not proofs). Improper integrals not supported.
+Binary distribution: local ad-hoc signature; no Developer ID notarization.

@@ -1,0 +1,64 @@
+UpdateCTestConfiguration  from :<workspace>/MathSolver/build/DartConfiguration.tcl
+Parse Config file:<workspace>/MathSolver/build/DartConfiguration.tcl
+Test project <workspace>/MathSolver/build
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 13
+    Start 13: gui_smoke
+
+13: Test command: <workspace>/MathSolver/build/Infinity.app/Contents/MacOS/Infinity "--smoke"
+13: Working Directory: <workspace>/MathSolver/build
+13: Test timeout computed to be: 100
+13: qt.qpa.fonts: Populating font family aliases took 105 ms. Replace uses of missing font family "Segoe UI" with one that exists to avoid this cost. 
+13: [1031/223100.902905:WARNING:/Users/runner/miniforge3/conda-bld/bld/rattler-build_qt6-webengine_1787126268/work/src/core/web_engine_library_info.cpp:63] Command line switch --webengine-resources-path not passed to renderer process
+13: [1031/223100.902919:WARNING:/Users/runner/miniforge3/conda-bld/bld/rattler-build_qt6-webengine_1787126268/work/src/core/web_engine_library_info.cpp:63] Command line switch --webengine-resources-path not passed to renderer process
+13: [1031/223100.903755:WARNING:/Users/runner/miniforge3/conda-bld/bld/rattler-build_qt6-webengine_1787126268/work/src/core/web_engine_library_info.cpp:63] Command line switch --webengine-resources-path not passed to renderer process
+13: [1031/223100.904955:WARNING:/Users/runner/miniforge3/conda-bld/bld/rattler-build_qt6-webengine_1787126268/work/src/core/web_engine_library_info.cpp:63] Command line switch --webengine-resources-path not passed to renderer process
+13: [1031/223100.906020:WARNING:/Users/runner/miniforge3/conda-bld/bld/rattler-build_qt6-webengine_1787126268/work/src/core/web_engine_library_info.cpp:63] Command line switch --webengine-locales-path not passed to renderer process
+13: [1031/223100.906177:WARNING:/Users/runner/miniforge3/conda-bld/bld/rattler-build_qt6-webengine_1787126268/work/src/core/web_engine_library_info.cpp:63] Command line switch --webengine-locales-path not passed to renderer process
+13: [1031/223100.906252:WARNING:/Users/runner/miniforge3/conda-bld/bld/rattler-build_qt6-webengine_1787126268/work/src/core/web_engine_library_info.cpp:63] Command line switch --webengine-locales-path not passed to renderer process
+13: [1031/223100.907474:WARNING:/Users/runner/miniforge3/conda-bld/bld/rattler-build_qt6-webengine_1787126268/work/src/core/web_engine_library_info.cpp:63] Command line switch --webengine-locales-path not passed to renderer process
+13: INTRO bright pixels 2289
+13: 2026-10-31 22:31:03.917 Infinity[84938:24322004] error messaging the mach port for IMKCFRunLoopWakeUpReliable
+13: NAV PASS startup, empty input, home entries, learning, Overleaf, about, eight curves, curve count limit, native point click, drag pan, two tangents, cusp and undefined point rejection, graph error, history restore, compact windows
+13: GUI PASS 0
+13: GUI PASS 1
+13: GUI PASS 2
+13: GUI PASS 3
+13: GUI PASS 4
+13: GUI PASS 5
+13: GUI PASS 6
+13: GUI PASS 7
+13: GUI PASS 8
+13: GUI PASS 9
+13: GUI PASS 10
+13: GUI PASS 11
+13: GUI PASS 12
+13: GUI PASS 13
+13: GUI PASS 14
+13: GUI PASS 15
+13: GUI PASS 16
+13: GUI PASS 17
+13: GUI PASS 18
+13: GUI PASS 19
+13: GUI PASS 20
+13: GUI PASS 21
+13: GUI PASS 22
+13: GUI PASS 23
+13: GUI PASS 24
+13: GUI PASS 25
+13: GUI PASS 26
+13: GUI PASS 27
+13: GUI PASS 28
+1/1 Test #13: gui_smoke ........................   Passed   27.18 sec
+
+The following tests passed:
+	gui_smoke
+
+100% tests passed out of 1
+
+Total Test time (real) =  27.20 sec

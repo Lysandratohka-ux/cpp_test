@@ -1,0 +1,9 @@
+Infinity 2.4.0 — macOS Apple Silicon
+Full CTest: 17/17 passed, 36.23 seconds.
+New parameter cases: parser 13/22 checks, integral 13/131, limit 16/47, guards 6/6.
+GUI calculation and rejection flows: 0 through 33 passed; native navigation tests passed.
+Standalone relocated /tmp/infinity-2.4-verify/Infinity.app --smoke: exit 0.
+DYLD_LIBRARY_PATH and QT_PLUGIN_PATH cleared; bundled symbolic definitions override an invalid external definitions path.
+Native CAS worker framed request for x^a: conditional result type and symbolic verification returned successfully.
+codesign --verify --deep --strict: exit 0.
+Windows runtime not tested.

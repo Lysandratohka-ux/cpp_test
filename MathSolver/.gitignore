@@ -1,0 +1,36 @@
+build*/
+.deps/
+*.dSYM/
+.DS_Store
+gui-smoke.png
+releases/
+screenshots/
+tmp/
+# Windows IDE/build outputs and local machine configuration
+.vs/
+out/
+CMakeUserPresets.json
+*.user
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.msi
+*.dmg
+# Credentials and private signing material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+# Course report intermediate files (keep final .tex/.pdf and figures)
+coursework/**/.build/
+coursework/**/*.aux
+coursework/**/*.log
+coursework/**/*.fls
+coursework/**/*.fdb_latexmk
+coursework/**/*.synctex.gz
+coursework/**/*.xdv
+coursework/**/*.out

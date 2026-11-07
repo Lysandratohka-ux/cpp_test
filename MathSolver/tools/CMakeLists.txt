@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.21)
+project(MathSolverAssets LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 20)
+find_package(Qt6 REQUIRED COMPONENTS Gui Svg)
+add_executable(mathsolver_icons icons.cpp)
+target_link_libraries(mathsolver_icons PRIVATE Qt6::Gui Qt6::Svg)

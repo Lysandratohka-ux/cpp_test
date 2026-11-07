@@ -1,0 +1,10 @@
+Infinity 2.4.1 — Lysandra
+Build: passed.
+Full CTest: 18/18 passed, 60.30 seconds.
+New domain audit: 15 assertions passed.
+GUI workflows: 0 through 33 passed, plus native navigation checks.
+Startup screenshot visually checked: Lysandra开发 displayed.
+Bundle metadata: version 2.4.1; copyright Lysandra.
+Final codesign --verify --deep --strict: exit 0.
+Standalone /tmp/infinity-2.4.1-review/Infinity.app --smoke with cleared developer library/plugin paths: exit 0.
+Windows runtime remains untested.

@@ -1,0 +1,16 @@
+MathSolver 2.2.0 — macOS arm64 — 2026-10-31
+Full C++/Qt build: PASS, no compiler warnings
+CTest: 10/10 PASS, 28.18 seconds
+Original core: 64 checks PASS
+Existing derivative/integral/limit/parser checks: 46/53/33/9 PASS
+Textbook and additional regressions: derivative 24, integral 74, limit 11, syntax/domain 21 PASS
+Original mathematical GUI workflows: 26 PASS
+New navigation checks: startup name/developer visible, empty idle startup, two home entries,
+LaTeX examples, Overleaf URL dispatch, about page, 8 curves, excess curve rejection,
+native mouse click, drag vs click, two finite tangents, cusp/undefined point rejection,
+malformed input, history restore without auto-compute, compact layouts: PASS
+Retina screenshots: inspected
+Relocated bundled app in /tmp/MathSolver-v2.2-verify: all navigation and 26 math flows PASS, exit 0
+External browser launch is intercepted only during automated smoke tests; normal clicks use QDesktopServices
+Final nested ad-hoc bundle signature: verified
+Windows: cross-platform sources/scripts retained; no Windows build or runtime validation on this host

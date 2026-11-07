@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+ <defs>
+  <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#243e60"/><stop offset="1" stop-color="#0c1b30"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#e3f3ff"/><stop offset=".45" stop-color="#a3d0f5"/><stop offset="1" stop-color="#669fdf"/></linearGradient>
+ </defs>
+ <rect x="64" y="64" width="896" height="896" rx="208" fill="url(#body)"/>
+ <rect x="66" y="66" width="892" height="892" rx="206" fill="none" stroke="#abcfea" stroke-opacity=".22" stroke-width="3"/>
+ <path d="M512 512 C435 400 389 357 322 357 C225 357 201 435 201 512 C201 589 237 667 322 667 C403 667 449 591 512 512 C575 433 621 357 702 357 C787 357 823 435 823 512 C823 589 799 667 702 667 C635 667 589 624 512 512" fill="none" stroke="#000d20" stroke-opacity=".35" stroke-width="77" stroke-linecap="round" transform="translate(0 12)"/>
+ <path d="M512 512 C435 400 389 357 322 357 C225 357 201 435 201 512 C201 589 237 667 322 667 C403 667 449 591 512 512 C575 433 621 357 702 357 C787 357 823 435 823 512 C823 589 799 667 702 667 C635 667 589 624 512 512" fill="none" stroke="url(#blue)" stroke-width="68" stroke-linecap="round"/>
+</svg>

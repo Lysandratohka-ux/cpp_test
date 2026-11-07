@@ -1,0 +1,27 @@
+qt.qpa.fonts: Populating font family aliases took 86 ms. Replace uses of missing font family "Segoe UI" with one that exists to avoid this cost. 
+GUI PASS 0
+GUI PASS 1
+GUI PASS 2
+GUI PASS 3
+GUI PASS 4
+GUI PASS 5
+GUI PASS 6
+GUI PASS 7
+GUI PASS 8
+GUI PASS 9
+GUI PASS 10
+GUI PASS 11
+GUI PASS 12
+GUI PASS 13
+GUI PASS 14
+GUI PASS 15
+GUI PASS 16
+GUI PASS 17
+GUI PASS 18
+GUI PASS 19
+GUI PASS 20
+GUI PASS 21
+GUI PASS 22
+GUI PASS 23
+GUI PASS 24
+2026-10-30 21:14:00.527 MathSolver[48472:24069397] error messaging the mach port for IMKCFRunLoopWakeUpReliable

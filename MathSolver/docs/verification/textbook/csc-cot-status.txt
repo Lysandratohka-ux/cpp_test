@@ -1,0 +1,8 @@
+MathSolver 2.1.1 — 2026-10-30
+Reproduced user input: (csc(x)-cot(x))/x, x -> 0
+Before: Unknown
+After: Exact 1/2; separately verified left, right and two-sided limits
+Added regression cases: 5
+Complete CTest: 10/10 PASS, 26.03 seconds
+GUI flows: 26/26 PASS
+No numeric sampling used to establish the limit

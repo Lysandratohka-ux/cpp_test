@@ -1,0 +1,25 @@
+Test project <workspace>/MathSolver/build
+      Start  1: core_regression
+ 1/10 Test  #1: core_regression ..................   Passed    0.10 sec
+      Start  2: calculus_derivative
+ 2/10 Test  #2: calculus_derivative ..............   Passed    0.04 sec
+      Start  3: calculus_integral
+ 3/10 Test  #3: calculus_integral ................   Passed    0.02 sec
+      Start  4: calculus_limit
+ 4/10 Test  #4: calculus_limit ...................   Passed    0.01 sec
+      Start  5: calculus_parser
+ 5/10 Test  #5: calculus_parser ..................   Passed    0.00 sec
+      Start  6: textbook_derivative
+ 6/10 Test  #6: textbook_derivative ..............   Passed    0.03 sec
+      Start  7: textbook_integral
+ 7/10 Test  #7: textbook_integral ................   Passed    3.87 sec
+      Start  8: textbook_limit
+ 8/10 Test  #8: textbook_limit ...................   Passed    0.05 sec
+      Start  9: textbook_syntax_domain
+ 9/10 Test  #9: textbook_syntax_domain ...........   Passed    0.01 sec
+      Start 10: gui_smoke
+10/10 Test #10: gui_smoke ........................   Passed   25.39 sec
+
+100% tests passed out of 10
+
+Total Test time (real) =  29.55 sec

@@ -1,0 +1,9 @@
+Test project <workspace>/MathSolver/build
+    Start 1: core
+1/2 Test #1: core .............................   Passed    1.91 sec
+    Start 2: gui_smoke
+2/2 Test #2: gui_smoke ........................   Passed    7.31 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =   9.23 sec

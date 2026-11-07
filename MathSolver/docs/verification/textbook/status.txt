@@ -1,0 +1,12 @@
+MathSolver 2.1.0 — macOS arm64, 2026-10-30
+Complete GUI build: PASS
+CTest: 10/10 PASS (24.62 seconds)
+Core-only build: 9/9 PASS
+Textbook original problems: derivative 24, integral 71, limit 6
+Additional integral family regressions: 3
+Syntax / domain cases: 21
+GUI flows: 25, including offline KaTeX and reciprocal trigonometric functions
+Relocated packaged bundle in /tmp/MathSolver-v2.1-verify: GUI 25/25 PASS, exit 0
+Final ad-hoc nested signature: verified by deployment script
+Windows: shared C++ sources retained; no Windows build executed
+Whole textbook: NOT fully covered; see docs/TEXTBOOK_COVERAGE.md

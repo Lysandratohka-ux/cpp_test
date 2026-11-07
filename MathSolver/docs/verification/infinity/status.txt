@@ -1,0 +1,8 @@
+Infinity 2.3.0, macOS Apple Silicon
+Full CTest suite: 13/13 passed, 33.62 seconds.
+Final GUI-only retest after mode highlight fix: 1/1 passed, 27.20 seconds.
+Relocated standalone /tmp/infinity-2.3-verify/Infinity.app --smoke: exit 0.
+Cleared DYLD_LIBRARY_PATH and QT_PLUGIN_PATH; invalid external QALCULATE_DEFINITIONS_DIR overridden by bundled resources.
+Native navigation smoke passed; GUI calculation flows 0 through 28 all passed.
+Final codesign --verify --deep --strict: exit 0.
+Windows sources, resources and worker protocol updated; Windows build not executed.
