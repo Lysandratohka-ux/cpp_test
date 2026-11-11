@@ -1,0 +1,67 @@
+一、素数定义
+    1.素数，指的是2，3，5，7等不能被任何除一以外正整数整除的数
+二、素数筛选方法
+1.试除法
+    试除法选择i*i<=num的本质道理在于n的任何一个素因子
+    bool isPrime(int num){
+        if(num<2){
+            return false;
+        }
+        for(int i=2;i*i<=num;i++){
+            if(num%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+2.埃筛
+   埃筛的本质道理，在于把所有的数标记为素数，然后将每个素数的倍数，从它自身的平方
+   （原因：如果乘以一个比它还小的数，这种标记在查验那个比它还小的数时就已经进行了）
+   一直到超出给定范围为止，都标记为合数，
+   这样每个数在被查验时，只要是合数，都会被它自身最小的素因子标记
+vector<bool> eratosthenes(int n) {
+    vector<bool> prime(n + 1, true);
+    prime[0] = prime[1] = false;
+    for (int i=4;i<=n;i+=2) {
+        prime[i] = false;
+    }                             //删除除2以外所有偶数
+    for (int p = 3; 1LL * p * p <= n; p+=2) {
+        if (prime[p]) {
+            for (long long j = 1LL * p * p; j <= n; j += p) {
+                prime[j] = false;
+            }
+        }
+    }
+
+    return prime;
+}
+3.线筛
+#include <vector>
+using namespace std;
+
+vector<bool> eulerSieve(int n) {
+    vector<bool> prime(n + 1, true);
+    prime[0] = prime[1] = false;
+
+    vector<int> primes;
+
+    for (int i = 2; i <= n; i++) {
+        if (prime[i]) {
+            primes.push_back(i);
+        }
+
+        for (int p : primes) {
+            if (1LL * i * p > n) {
+                break;
+            }
+
+            prime[i * p] = false;
+
+            if (i % p == 0) {
+                break;
+            }
+        }
+    }
+
+    return prime;
+}

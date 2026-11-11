@@ -1,0 +1,7 @@
+.venv/
+.browser-profile/
+preview.json
+status.json
+*.ics
+__pycache__/
+snapshot*.json

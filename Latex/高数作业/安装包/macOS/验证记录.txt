@@ -1,0 +1,11 @@
+Infinity 2.4.1 · Lysandra
+
+DMG完整性：hdiutil verify通过。
+镜像内容：Infinity.app、指向/Applications的快捷方式、安装说明和第三方许可文件。
+应用签名：codesign --verify --deep --strict通过。
+模拟安装：从DMG复制到临时目录后启动，而非直接引用开发目录。
+运行验证：清空开发库/插件路径及外部符号定义路径后，--smoke退出码0。
+桌面计算/错误拒绝流程：0至33，共34条通过；另含启动、首页、历史、绘图切线等导航检查。
+本机：Apple Silicon，macOS 27.2。
+主程序最低系统版本标记：macOS 26.5；未验证旧版系统。
+Windows：本次没有生成或验证Windows EXE。

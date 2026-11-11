@@ -6,6 +6,7 @@
     "cmake.generator": "Ninja",
     "code-runner.runInTerminal": true,
     "code-runner.saveFileBeforeRun": true,
+    "editor.inlineSuggest.enabled": false,
     "code-runner.executorMap": {
         "cpp": "cd $dir && SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk /usr/bin/clang++ -std=c++17 -Wall -Wextra -pedantic \"$fileName\" -o \"$fileNameWithoutExt.exe\" && \"./$fileNameWithoutExt.exe\"",
         "python": "python3 -u"
@@ -16,5 +17,6 @@
         "**/*.exe": true,
         "**/*.o": true,
         "**/*.obj": true
-    }
+    },
+    "cmake.sourceDirectory": "/Users/lysandrayatogami/Downloads/代码/cpp_test/MathSolver"
 }

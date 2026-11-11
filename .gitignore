@@ -1,1 +1,27 @@
 *.exe
+
+# Local build outputs and credentials
+.DS_Store
+*.dSYM/
+__pycache__/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+/tmp/
+
+# LaTeX compilation intermediates and release installers
+/Latex/**/.build/
+/Latex/**/*.aux
+/Latex/**/*.log
+/Latex/**/*.fls
+/Latex/**/*.fdb_latexmk
+/Latex/**/*.synctex.gz
+/Latex/**/*.xdv
+/Latex/**/*.out
+/Latex/**/*.toc
+/Latex/**/*.blg
+/Latex/**/*.dmg

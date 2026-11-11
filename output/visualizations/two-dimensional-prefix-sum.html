@@ -1,0 +1,99 @@
+<div id="prefix-sum-demo">
+  <style>
+    #prefix-sum-demo {
+      color: var(--foreground);
+      font-family: inherit;
+    }
+    #prefix-sum-demo .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(180px, 0.65fr);
+      gap: 20px;
+      align-items: center;
+    }
+    #prefix-sum-demo .matrix {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(48px, 1fr));
+      gap: 6px;
+    }
+    #prefix-sum-demo .cell.in-prefix {
+      background: color-mix(in srgb, var(--viz-series-1) 20%, transparent);
+    }
+    #prefix-sum-demo .result {
+      display: grid;
+      gap: 10px;
+    }
+    #prefix-sum-demo .sum-value {
+      color: var(--foreground);
+    }
+    #prefix-sum-demo .coords {
+      color: var(--muted-foreground);
+    }
+    @media (max-width: 520px) {
+      #prefix-sum-demo .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <h3>二维前缀和：从左上角累加到所选格子</h3>
+  <div class="layout">
+    <div>
+      <div class="text-small text-muted">点击格子，选择前缀区域的右下角</div>
+      <div class="matrix" aria-label="4乘4数字矩阵"></div>
+    </div>
+    <div class="result card" aria-live="polite">
+      <div class="coords"></div>
+      <div class="sum-value viz-stat-value"></div>
+      <div class="text-small text-muted">高亮区域中的所有数相加，就是 S[i][j]</div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const root = document.getElementById('prefix-sum-demo');
+      const values = [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 1, 2, 3],
+        [4, 5, 6, 7]
+      ];
+      const matrix = root.querySelector('.matrix');
+      const coords = root.querySelector('.coords');
+      const sumValue = root.querySelector('.sum-value');
+      let selectedRow = 1;
+      let selectedCol = 2;
+
+      values.forEach((row, r) => {
+        row.forEach((value, c) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'btn viz-tile cell cursor-interaction tabular-nums';
+          button.textContent = value;
+          button.dataset.row = r;
+          button.dataset.col = c;
+          button.setAttribute('aria-label', `第${r + 1}行第${c + 1}列，值${value}`);
+          button.addEventListener('click', () => {
+            selectedRow = r;
+            selectedCol = c;
+            render();
+          });
+          matrix.appendChild(button);
+        });
+      });
+
+      function render() {
+        let sum = 0;
+        root.querySelectorAll('.cell').forEach((cell) => {
+          const r = Number(cell.dataset.row);
+          const c = Number(cell.dataset.col);
+          const included = r <= selectedRow && c <= selectedCol;
+          cell.classList.toggle('in-prefix', included);
+          cell.setAttribute('aria-pressed', r === selectedRow && c === selectedCol ? 'true' : 'false');
+          if (included) sum += values[r][c];
+        });
+        coords.textContent = `右下角：(i, j) = (${selectedRow + 1}, ${selectedCol + 1})`;
+        sumValue.textContent = `S[${selectedRow + 1}][${selectedCol + 1}] = ${sum}`;
+      }
+
+      render();
+    })();
+  </script>
+</div>

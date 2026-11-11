@@ -1,0 +1,306 @@
+\documentclass{ctexart}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs,mathtools}
+\usepackage{amssymb,enumerate}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{extarrows}
+\usepackage{esint}
+
+\usepackage{geometry}
+\geometry{a4paper,left=2.5cm,right=2.5cm,bottom=3.5cm}
+
+\title{ }
+\author{ }
+\date{ }
+
+\newcommand{\week}[2]{\clearpage\section*{Week #1 \quad #2}\addcontentsline{toc}{section}{Week #1 ：
+#2}}
+
+
+\newtheorem{defi}{定义}
+\newtheorem{prop}{命题}
+\newtheorem{thm}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem*{pf}{证明}
+\newtheorem*{sol}{解}
+\newtheorem*{rmk}{注}
+
+\theoremstyle{definition}
+\newtheorem{ex}{例}
+\newtheorem*{work}{思考题}
+
+\DeclareMathOperator{\dif}{d\!}
+\DeclareMathOperator{\anlim}{\lim\limits_{\mathnormal{n}\to\infty}}
+\newcommand{\tr}{\textnormal{tr}}
+\newcommand{\Ric}{\textnormal{Ric}}
+\newcommand{\RR}{\textnormal{R}}
+\newcommand{\rr}{\textnormal{R}}
+\newcommand{\kod}{\textnormal{kod}}
+\newcommand{\Ker}{\textnormal{Ker}\,}
+\newcommand{\rank}{\textnormal{rank}\,}
+\renewcommand{\Im}{\textnormal{Im}\,}
+\newcommand{\Hess}{\textnormal{Hess\,}}
+\newcommand{\Rm}{\textnormal{Rm}}
+\newcommand{\II}{\textnormal{II}}
+\newcommand{\PT}{\textnormal{PT}}
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\de}{\delta}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\ka}{\kappa}
+\renewcommand{\frac}{\dfrac}
+
+\newcommand{\BF}{\mathbb{F}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BP}{\mathbb{P}}
+\newcommand{\BQ}{\mathbb{Q}}
+\newcommand{\BN}{\mathbb{N}}
+
+\everymath{\displaystyle}
+
+
+\begin{document}
+
+\week{0}{\S1}
+
+写在前面: 给读者的建议. 
+
+\begin{enumerate}
+
+\item 对数学的要求和认知需要转变: 高中数学知识点少, 题目艰深, 目的是启蒙和筛选; 高等数学课程知识点多, 题目基础, 目的是希望学生掌握必要的数学工具; 
+
+\item AI是辅助学习,答疑解惑的强大工具, 我们需要合理利用; 但是自己的思考和理解才是将抽象知识内化为自身能力的核心途径;
+
+\item 学会提问和主动思考, 计算能力的训练固然重要, 但也不要抵触理论和证明.
+\end{enumerate}
+
+\begin{ex}
+写出如下复合函数的表达式, 定义域与值域.
+
+\begin{enumerate}
+
+\item $f(x)=\frac{x}{\sqrt{x^2+1}},\, f[f(x)];$
+
+
+\item $f(x)=\begin{cases}
+1,&|x| \leq 1, \\
+0,&|x|>1 .
+\end{cases}, \, g(x)=\begin{cases}
+2-x^{2}, & |x| \leq 2, \\
+2, & |x|>2 .
+\end{cases},\, f[g(x)]\text{与 }g[f(x)];$
+
+
+\end{enumerate}
+
+
+
+\end{ex}
+
+\begin{ex}
+写出下列函数在对应区间上的反函数: 
+\[
+(1) f(x)=\frac{x}{\sqrt{x^2+1}},\, \BR; \quad (2) \sin x,\, \text{它的每个单调区间 }; \quad (3) \frac{1}{x}; \,\BR\setminus \{0\}; \]\[
+(4) \begin{cases}
+1-x, &x=\frac{1}{n}\text{或 }1-\frac{1}{n},n=1,2,\cdots;\\
+x, &\text{其它}.
+\end{cases} \,[0,1].
+\]
+\end{ex}
+
+\begin{rmk}
+可以证明: \textbf{区间上的严格单调函数必定有反函数}(留给读者自行完成), 但是反之不然. 今后将可以知道: 区间上的连续函数如果有反函数,则它必定严格单调.
+\end{rmk}
+
+\begin{ex}
+设$f$是定义在对称区间$I$上的函数, 证明: $f$总可以写成一个奇函数与一个偶函数的和.
+\end{ex}
+
+
+\begin{ex}
+求如下集合$S$的上下确界:  
+\begin{enumerate}
+
+\item $S=(-2,1)$; 
+
+\item $S=\{\pm 1,\pm\frac{1}{2},\cdots,\pm\frac{1}{n},\cdots\}$; 
+
+\item $S=\{1,\frac{1}{2},\cdots,\frac{1}{n},\cdots\}$. 
+\end{enumerate}
+\end{ex}
+
+\begin{rmk}
+我们有\textbf{确界原理: 有上(下)界的集合必定有上(下)确界}. 它表明实数具有完备性, 被称为实数系的完备性定理之一. 实数系有六大完备性定理, 它们之间互相等价, 即可以互相推导, 今后我们将逐一介绍. 
+\end{rmk}
+
+\newpage
+\week{1}{\S2.1}
+ \setcounter{ex}{0}
+\begin{ex}
+用$\ep-N$ 语言证明下列极限: 
+\[
+(1) \anlim \frac{2n^2+n}{3n^2-5}=\frac23; \qquad (2) \anlim \sqrt[n] a=1 (a>0); \qquad (3) \anlim \underbrace{0.99\cdots9}_{n\text{ 个 }9}=1.
+\]
+\end{ex}
+
+\begin{ex}
+证明数列极限的如下性质: 
+\begin{enumerate}
+
+\item $\anlim x_n=a$ 当且仅当 $\forall \ep>0$, $\{x_n\}$中只有有限项在$a$ 的 $\ep$-邻域 $(a-\ep, a+\ep)$外; 
+
+\item 若$\anlim x_n=a>0$, 则 $\exists N\in \BN, \forall n>N, x_n> \frac{a}{2}>0$ ($\frac{a}{2}>0$可以换成$(0,a)$中任意一个数). 
+
+\item 若$\anlim x_n=+\infty$且 $y_n\geq x_n$, 则$\anlim y_n=+\infty$.
+
+\item 若$\anlim a_{2n-1}=\anlim a_{2n}=a$, 则$\anlim a_n=a$. 
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+求下列极限: 
+\[
+(1) \anlim \sqrt[n]{a_1^n+\cdots+a_k^n}\, (a_1,\cdots,a_k>0); \qquad (2) \anlim \frac{1}{2}\cdot\frac{3}{4}\cdot\ldots\cdot\frac{2n-1}{2n}; \qquad (3) \anlim \frac{n!}{n^n}.
+\]
+\end{ex}
+
+
+\begin{ex}
+证明: 
+\begin{enumerate}
+
+\item $H_n=1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}$是正无穷大. 
+
+\item $B_n=1+\frac{1}{2^2}+\frac{1}{3^2}+\cdots+\frac{1}{n^2}$收敛; 
+
+\item $\gamma_n=H_n-\ln n$收敛.
+
+\item* 利用Cauchy收敛原理重新证明 $B_n$收敛.
+\end{enumerate}
+\end{ex}
+
+\begin{rmk}
+\,\begin{enumerate}
+\item $H_n$被称为\textbf{调和级数}. 
+
+\item  求$B_n$的极限在历史上被称为\textbf{Basel问题}, Euler利用$\frac{\sin x}{x}$的无穷乘积给出了一个巧妙但不严格的解答, 下学期我们将使用Fourier级数的方法求出其极限值为$\frac{\pi^2}{6}$.  
+
+\item  一般地, 对于实数$p$, $1+\frac{1}{2^p}+\frac{1}{3^p}+\cdots+\frac{1}{n^p}$的极限称为\textbf{$p$-级数}, 使用本例中的方法也可以讨论它的收敛性(留给读者自行完成). 它是我们在下学期学习级数时最重要的一个例子.  
+
+\item $\gamma_n$的极限$\gamma$被称为\textbf{Euler (-Mascheroni)常数}, 至今我们仍不知道它是否是无理数.
+
+\item Cauchy收敛原理也是实数系的完备性定理之一.
+\end{enumerate}
+\end{rmk}
+
+\begin{ex}
+证明极限的平均值定理: 
+\begin{enumerate}
+
+\item 若$\anlim x_n=a$, 则 $\anlim\frac{a_1+\cdots+a_n}{n}=a$; 
+
+\item 若$\anlim x_n=+\infty$, 则 $\anlim\frac{a_1+\cdots+a_n}{n}=+\infty$,
+
+\item *若$\anlim a_n=a$且$\anlim b_n=b$, 则 $\anlim\frac{a_1b_n+\cdots+a_nb_1}{n}=ab$.
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+*证明: 
+\begin{enumerate}
+\item 任一数列必有单调子列; 
+
+\item 无上界数列必有正无穷大子列.
+\end{enumerate}
+\end{ex}
+\begin{rmk}
+\,\begin{enumerate}
+
+\item 由$(1)$结合单调有界原理, 我们能得到\textbf{(Bolzano-Weierstrass)列紧性定理: 有界数列必有收敛子列}. 反过来, 列紧性定理也可以直接证明单调有界原理(留给读者自行完成). 单调有界原理和列紧性定理也是实数系完备性定理中的两个.
+
+\item 同理可得\textbf{无下界数列必有负无穷大子列}. 利用这些结果. 再结合数列极限与子列极限的关系, 我们便能通过子列的收敛情况来确定数列界和收敛的情况(留给读者自行完成).
+\end{enumerate}
+\end{rmk}
+
+
+\newpage
+\week{2}{\S2.2 2.3}
+ \setcounter{ex}{0}
+\begin{ex}
+用$\ep-\delta$ 语言证明下列极限: 
+\[
+(1) \lim\limits_{x\to\infty} \frac{2x^2+x}{x^2+1}=2; \qquad (2) \lim\limits_{x\to 2^+}\frac{2x}{x^2-4}=+\infty;\]\[ (3)\text{设 } \textbf{ Dirichlet函数 }\, D(x)=\begin{cases}1,& x\in\BQ;\\0,&x \notin \BQ,\end{cases}\quad \lim\limits_{x\to 0}D(x)\text{ 不存在 }.
+\]
+\end{ex}
+
+\begin{ex}
+求极限
+
+\[(1) \lim_{x\to0}\frac{\sqrt{1-\cos x}}{x},\quad
+(2) \lim_{x\to\infty}\frac{x^{99}+2x^{98}+\cdots+99x+100}
+{100x^{99}+99x^{98}+\cdots+2x+1};\quad
+(3) \lim_{x\to\infty}\left(\frac{x+1}{x-1}\right)^{5x};\quad
+\]\[(4)\lim_{n\to\infty}\left(\frac1{n^3}+\frac{2^2}{n^3}+\cdots+
+\frac{(n-1)^2}{n^3}+\frac{n^2}{n^3}\right);\quad (5) \lim_{n\to\infty}\prod_{k=1}^n\cos\frac{x}{2^k};\quad
+(6) \lim_{x\to0}\left(\frac{2+e^{\tfrac1x}}{1+e^{\tfrac2x}}+\frac{x}{|x|}\right).\]
+\end{ex}
+
+\begin{ex}
+判断下列无穷小的阶$(x\to0^+)$:
+\[(1) \sqrt{x^4+\sqrt{x+\sqrt{x}}},\quad (2) e^{-\tfrac{1}{x}},\quad
+(3) x\sin\frac1x,\quad (4) \frac{\sin\frac1x}{\ln x}.\]
+\end{ex}
+
+
+\begin{ex}
+求极限: 
+\[(1) \lim_{x\to0}\frac{\sin x-\tan x}{x^3};\quad
+(2) \lim_{x\to0}\frac{e^x-\sqrt{1+\tan x}}{\ln(1+3x)};\quad
+(3) \lim_{x\to0}\frac{\sqrt{\cos x}-\sqrt[3]{\cos x}}{\sin^2x};
+\]\[(4) \lim_{x\to0}\left(\frac{a^x+b^x+c^x}{3}\right)^{\tfrac1x}, a,b,c>0;\quad
+(5) \lim_{x\to\infty}\frac{(1+\frac{1}{x})^{x^2}}{e^x};\quad
+(6) \lim_{n\to\infty}\sin^2\!\left(\pi\sqrt{n^2+n}\right); \]\[
+(7)^* \anlim n^4\left[\frac{100}{n^3}-\sum_{k=1}^{100} \frac{1}{(n+k)^3}\right];\quad 
+(8)^* \anlim \frac{\sqrt[n]{n!}}{n}.\]
+\end{ex}
+
+
+\begin{ex}
+求以下递推数列的极限: 
+\[
+(1)x_1>-6, x_{n+1}=\sqrt{x_n+6};\quad (2) x_1=1, x_{n+1}=\frac{1}{2x_n+1}.
+\]
+\end{ex}
+
+\begin{rmk}
+将此例的做法抽象出来, 可以得到一般规律: \textbf{对于由$x_{n+1}=f(x_n)$定义的递推数列$\{x_n\}$, 递推函数$f$的单调性将决定$\{x_n\}$的单调性}(留给读者自行完成).
+\end{rmk}
+
+
+\begin{ex}
+设 $f$ 是定义在 $\mathbb{R}$ 上的周期函数, 且$\lim_{x\to+\infty}f(x)=0$, 证明 $f\equiv0$.
+
+\end{ex}
+
+
+
+\begin{ex}*
+使用确界原理证明: 区间上的单调函数在每一点均存在左右极限.
+\end{ex}
+
+\begin{rmk}\,
+\begin{enumerate}
+\item 此命题表明: \textbf{区间上的单调函数至多只有第二类间断点};
+\item 用相同的方法,可以用确界原理证明单调有界原理(留给读者自行完成).
+\end{enumerate}
+\end{rmk}
+
+
+
+
+\end{document}

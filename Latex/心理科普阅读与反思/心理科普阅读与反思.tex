@@ -1,0 +1,71 @@
+% 使用 XeLaTeX 编译两次；无需单独的 bib 文件。
+% 正文约 500 字；附页为阅读材料摘引与来源，不计入读后感正文。
+\documentclass[UTF8,a4paper,zihao=-4,fontset=fandol]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+% 为作者姓名中的生僻字提供系统字体回退。
+\IfFontExistsTF{Songti SC}{\setCJKfallbackfamilyfont{rm}{Songti SC}}{}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\setstretch{1.35}
+\setlength{\parindent}{2em}
+\title{理解情绪，在行动中照顾自己\\[0.4em]\large 心理科普阅读与反思}
+\author{\kaishu Lysandra}
+\date{\today}
+\begin{document}
+\maketitle
+\vspace{-2.5em}
+阅读五篇心理科普文章后，我对心理健康有了新的理解：它并不要求人时时积极，而在于理解情绪，并找到合适的回应方式。
+
+《高考将至，如何安放无孔不入的焦虑？》让我认识到，适度焦虑有其作用，目标不必是彻底消除紧张。面对考试，我可以把注意力从担忧结果转向复习安排，并给运动和休息留出时间。\cite{anxiety}
+
+《该怎么面对你，我的负面情绪？》进一步启发我，压住情绪未必能改变感受，重新理解事件同样重要。一次失利可以提示知识漏洞，却不能证明一个人没有价值。\cite{emotion}《关于“躺平”，习得性无助有话说》则让我警惕：如果把暂时受挫看成永远无能，就可能放弃原本能够完成的任务。我希望从一个具体的小目标开始，记录进步，逐步积累掌控感。\cite{helpless}
+
+另两篇文章把反思引向人际关系。《所谓的“理性”到底是什么？》提醒我，判断问题时也应考虑人的感受。\cite{reason}《建议需谨慎：“不请自来式”建议的危害与成因》让我明白，朋友倾诉时可能首先需要理解。我会先倾听，再询问对方是否需要建议。\cite{advice}
+
+这些改变也需要耐心。我准备在每周结束时回顾一次：哪些担忧已有事实依据，哪些只是猜测，哪些行动确实帮助了自己，而不要求读完文章就立刻变得从容。
+
+五篇文章共同提醒我，心理知识的价值要落实在日常行动中。同时，科普提供的是理解问题的视角，不能仅凭几个概念就给自己或他人贴标签。今后，我希望少些笼统的自我否定，多些具体的观察、沟通与尝试。
+
+\clearpage
+\section*{阅读材料与原文摘引}
+以下五篇均来自澎湃新闻“懂点心理学”专栏（华东师范大学心理与认知科学学院）。引文为各文原文的简短摘录，供核对阅读依据；读后感见前页。
+\subsection*{高考将至，如何安放无孔不入的焦虑？}
+王一集，2020-07-03。\cite{anxiety}
+\begin{quote}
+但是，焦虑也是一把双刃剑。
+\end{quote}
+\subsection*{该怎么面对你，我的负面情绪？}
+张茗{\CJKfontspec{Songti SC}喆}、邱天，2021-03-04。\cite{emotion}
+\begin{quote}
+我们需要采取行动，调节自己的情绪。
+\end{quote}
+\subsection*{关于“躺平”，习得性无助有话说}
+文柳，2026-08-20。\cite{helpless}
+\begin{quote}
+行为和动机效应包括被动、放弃和拖延；
+\end{quote}
+\subsection*{所谓的“理性”到底是什么？}
+邱天、陆静怡，2025-08-18。\cite{reason}
+\begin{quote}
+总体而言，追求朴素理性未必总是有益。
+\end{quote}
+\subsection*{建议需谨慎：“不请自来式”建议的危害与成因}
+吴霁雯，2022-06-09。\cite{advice}
+\begin{quote}
+她需要的是倾听者，而不是建议者。
+\end{quote}
+
+\begin{thebibliography}{9}
+\bibitem{anxiety} 王一集. 高考将至，如何安放无孔不入的焦虑？[EB/OL]. 澎湃新闻·懂点心理学, 2020-07-03 [2026-10-19].\newline
+\url{https://www.thepaper.cn/newsDetail_forward_8087488}.
+\bibitem{emotion} 张茗{\CJKfontspec{Songti SC}喆}、邱天. 该怎么面对你，我的负面情绪？[EB/OL]. 澎湃新闻·懂点心理学, 2021-03-04 [2026-10-19].\newline
+\url{https://www.thepaper.cn/newsDetail_forward_11525117}.
+\bibitem{helpless} 文柳. 关于“躺平”，习得性无助有话说[EB/OL]. 澎湃新闻·懂点心理学, 2026-08-20 [2026-10-19].\newline
+\url{https://www.thepaper.cn/newsDetail_forward_33803929}.
+\bibitem{reason} 邱天、陆静怡. 所谓的“理性”到底是什么？[EB/OL]. 澎湃新闻·懂点心理学, 2025-08-18 [2026-10-19].\newline
+\url{https://www.thepaper.cn/newsDetail_forward_31421337}.
+\bibitem{advice} 吴霁雯. 建议需谨慎：“不请自来式”建议的危害与成因[EB/OL]. 澎湃新闻·懂点心理学, 2022-06-09 [2026-10-19].\newline
+\url{https://www.thepaper.cn/newsDetail_forward_18422618}.
+\end{thebibliography}
+\end{document}

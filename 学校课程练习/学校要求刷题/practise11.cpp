@@ -14,7 +14,7 @@ long long greatestCommonDivisor(long long a, long long b) {
 int main() {
     long long m, n;
     cin >> m >> n;
-
+    
     long long gcd = greatestCommonDivisor(m, n);
     long long lcm = m / gcd * n;
 
