@@ -25,3 +25,4 @@ __pycache__/
 /Latex/**/*.toc
 /Latex/**/*.blg
 /Latex/**/*.dmg
+aqtinstall.log

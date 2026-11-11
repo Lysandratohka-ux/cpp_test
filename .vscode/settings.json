@@ -18,5 +18,5 @@
         "**/*.o": true,
         "**/*.obj": true
     },
-    "cmake.sourceDirectory": "/Users/lysandrayatogami/Downloads/代码/cpp_test/MathSolver"
+    "cmake.sourceDirectory": "${workspaceFolder}/MathSolver"
 }
