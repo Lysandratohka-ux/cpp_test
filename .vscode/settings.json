@@ -16,5 +16,6 @@
         "**/*.exe": true,
         "**/*.o": true,
         "**/*.obj": true
-    }
+    },
+    "cmake.sourceDirectory": "D:/编程文件/cpp_test/MathSolver"
 }
