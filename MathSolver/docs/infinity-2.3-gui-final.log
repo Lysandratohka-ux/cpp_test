@@ -1,6 +1,6 @@
-UpdateCTestConfiguration  from :<workspace>/MathSolver/build/DartConfiguration.tcl
-Parse Config file:<workspace>/MathSolver/build/DartConfiguration.tcl
-Test project <workspace>/MathSolver/build
+UpdateCTestConfiguration  from :/Users/lysandrayatogami/Downloads/代码/cpp_test/MathSolver/build/DartConfiguration.tcl
+Parse Config file:/Users/lysandrayatogami/Downloads/代码/cpp_test/MathSolver/build/DartConfiguration.tcl
+Test project /Users/lysandrayatogami/Downloads/代码/cpp_test/MathSolver/build
 Constructing a list of tests
 Done constructing a list of tests
 Updating test list for fixtures
@@ -10,8 +10,8 @@ Checking test dependency graph end
 test 13
     Start 13: gui_smoke
 
-13: Test command: <workspace>/MathSolver/build/Infinity.app/Contents/MacOS/Infinity "--smoke"
-13: Working Directory: <workspace>/MathSolver/build
+13: Test command: /Users/lysandrayatogami/Downloads/代码/cpp_test/MathSolver/build/Infinity.app/Contents/MacOS/Infinity "--smoke"
+13: Working Directory: /Users/lysandrayatogami/Downloads/代码/cpp_test/MathSolver/build
 13: Test timeout computed to be: 100
 13: qt.qpa.fonts: Populating font family aliases took 105 ms. Replace uses of missing font family "Segoe UI" with one that exists to avoid this cost. 
 13: [1031/223100.902905:WARNING:/Users/runner/miniforge3/conda-bld/bld/rattler-build_qt6-webengine_1787126268/work/src/core/web_engine_library_info.cpp:63] Command line switch --webengine-resources-path not passed to renderer process

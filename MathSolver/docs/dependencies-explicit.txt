@@ -1,4 +1,4 @@
-List of packages in environment: "<workspace>/MathSolver/.deps/qt"
+List of packages in environment: "/Users/lysandrayatogami/Downloads/代码/cpp_test/MathSolver/.deps/qt"
 
 https://conda.anaconda.org/conda-forge/osx-arm64/bzip2-1.0.8-h4e30115_10.conda
 https://conda.anaconda.org/conda-forge/noarch/ca-certificates-2026.10.23-hbd8a1cb_0.conda
